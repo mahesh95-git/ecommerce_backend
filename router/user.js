@@ -17,8 +17,8 @@ const {
   isAuthenticatedUser,
   authoriseUserRole,
 } = require("../middleware/authication");
-const passport = require("passport");
-const { logoutuser } = require("../controller/passport");
+// const passport = require("passport");
+// const { logoutuser } = require("../controller/passport");
 const router = express.Router();
 router.route("/register").post(registerUser);
 router.route("/login").post(loginuser);
@@ -32,12 +32,12 @@ router
   .route("/user/admin/allUser")
   .get(isAuthenticatedUser, authoriseUserRole("admin"), getAllUser);
 router
-  .route("/admin/user/:id")
+  .route("/user/admin/:id")
   .get(getSingleUser)
   .put(updateUserRole)
   .delete(deleteUser);
 // using  passprot js authentication
-router.route("/loginpassport").post(passport.authenticate("local"));
-router.route("/logoutuser").get(logoutuser);
+// router.route("/loginpassport").post(passport.authenticate("local"));
+// router.route("/logoutuser").get(logoutuser);
 
 module.exports = router;
