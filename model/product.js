@@ -64,6 +64,13 @@ const productschema = new mongoose.Schema({
       rating: {
         type: Number,
         required: true,
+        validate: {
+          validator: function () {
+            return (
+              Math.floor(this.rating) === this.rating >= 1 && this.rating <= 5
+            );
+          },
+        },
       },
       comment: {
         type: String,
