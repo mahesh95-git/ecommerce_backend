@@ -56,7 +56,6 @@ const orderSchema = mongoose.Schema({
     id: {
       type: String,
       required: true,
-  
     },
     status: {
       type: String,
@@ -65,7 +64,6 @@ const orderSchema = mongoose.Schema({
     paidAt: {
       type: Date,
       required: true,
-      
     },
     itemPrice: {
       type: Number,
@@ -91,7 +89,6 @@ const orderSchema = mongoose.Schema({
       type: String,
       required: true,
       default: "Processing",
-      
     },
     deliverdAt: Date,
     createAt: {

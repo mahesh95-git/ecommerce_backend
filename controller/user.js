@@ -17,14 +17,6 @@ const registerUser = asyncErrorHandler(async (req, res, next) => {
       url: "fjkjdkajdkajkajk",
     },
   });
-
-  //   const token=newuser.creatJwtToken()
-  //   res.status(201).json({
-  //     success:true,
-  //   newuser,
-  //   token
-
-  //   })
   sendJwt(newuser, 200, res);
 });
 

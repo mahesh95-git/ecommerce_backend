@@ -63,7 +63,7 @@ const updateProductQuantity = asyncErrorHandler(async (req, res, next) => {
 
   res.status(201).json({
     success: true,
-    message:"you've change product quantity succefully"
+    message: "you've change product quantity succefully",
   });
 });
 
